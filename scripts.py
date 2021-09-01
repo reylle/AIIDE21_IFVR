@@ -1,11 +1,13 @@
 from csv import reader
 from math import sqrt
+from pathlib import Path
 from pickle import dump, HIGHEST_PROTOCOL, load
 
 
 def average_absence_with_return(frequency: list):
     """
     Calculate a player's average Absence With Return and Last Absence
+
     :param frequency: A list containing a player's frequency
     :return: The player's average Absence With Return and Last Absence
     """
@@ -139,6 +141,18 @@ def calculate_std_dev(average_general: float, average_individual: dict) -> float
     return sqrt(summ)
 
 
+def file_exist(full_path: str) -> bool:
+    """
+    Return if a file exist in the path
+
+    :param full_path: The path where the file its located
+    :return: If the file exist in the path
+    """
+    file = Path(full_path)
+
+    return file.is_file()
+
+
 def format_for_google_sheets(values: list) -> list:
     """
     Replace all '.' for ',' to be adequated to google sheets
@@ -210,6 +224,42 @@ def ifv_calculation(data: dict):
         players_last_absence[player] = last_absence
 
     return players_ifv, players_last_absence
+
+
+def label_players_fv(players_fv: float, players_la: dict) -> dict:
+    """
+    Label the players using their FV and Last Absence
+
+    :param players_fv: The player base Fixed Value
+    :param players_la: Each player's Last Absence
+    :return: A dictionary containing each player's label
+    """
+    players_label = {}
+    for player in players_la.keys():
+        if players_la[player] > players_fv:
+            players_label[player] = 'Churner'
+        else:
+            players_label[player] = 'Non-Churner'
+
+    return players_label
+
+
+def label_players_ifv(players_ifv: dict, players_la: dict) -> dict:
+    """
+    Label the players using their IFV and Last Absence
+
+    :param players_ifv: Each player's Individual Fixed Value
+    :param players_la: Each player's Last Absence
+    :return: A dictionary containing each player's label
+    """
+    players_label = {}
+    for player in players_la.keys():
+        if players_la[player] > players_ifv[player]:
+            players_label[player] = 'Churner'
+        else:
+            players_label[player] = 'Non-Churner'
+
+    return players_label
 
 
 def load_csv(file_full_path: str, delimiter=',') -> dict:
