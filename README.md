@@ -58,12 +58,12 @@ The datasets, codes, and results for the AIIDE21 accepted paper: "Optimizing Pro
 # Instructions:
   If you want to run all the paper's experiments:
   
-    Download all files except for Results.7z;
+    Download all files;
     Unzip the compressed files inside the same folder;
-    The structure should be "\your_folder\Data", "\your_folder\Logs", "\your_folder\main.py" and "\your_folder\scripts.py";
+    The structure should be "\your_folder\Data", "\your_folder\Logs", "\your_folder\Results", "\your_folder\main.py" and "\your_folder\scripts.py";
     Run main.py;
     The results can be found in the Logs folder;
-    If you want to check the results as charts, the results can be upload to the spreadsheets present in the Sheets folder.
+    If you want to check the results as charts, the results can be upload to the spreadsheets present in the "Results/Sheets" folder.
   If you want to check the results:
   
     Download the file Results.7z;
