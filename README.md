@@ -20,12 +20,12 @@ The datasets, codes, and results for the AIIDE21 accepted paper: "Optimizing Pro
 
 # Hardware Requirements:
   The hardware requirement can vary depending on your goal and input data. 
-  To run the experiments it is advisable to have 32 GB of RAM because it considers numerous windows sizes and slides them throught the whole dataset. 
-  To implement in a production evironment the requirement depends on the input data, but it should be much smaller.
+  It is advisable to have 32 GB of RAM to run the experiments because it considers numerous windows sizes and slides them throughout the whole dataset. 
+  To implement in a production environment, the requirement depends on the input data, but it should be much smaller.
 
 # Warning
   Since there are numerous windows sizes and all of them run through the whole dataset, the number of iterations is very high. 
-  In an AMD Ryzen 9 5950X it took 3 and a half hours to run it all.
+  In an AMD Ryzen 9 5950X it took three and a half hours to run it all.
  
 # Datasets Information
   The datasets used in the paper and provided in this project contain the login information of multiple players in a certain period. More information can be seen below:
