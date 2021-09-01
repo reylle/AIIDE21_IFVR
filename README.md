@@ -10,7 +10,7 @@ The datasets, codes, and results for the AIIDE21 accepted paper: "Optimizing Pro
     2- The definition of churn (i.e., what can be considered as churn) is static; 
 
 # Solution
-  We proposed a novel metric to define churn individually (named Individual Fixed Value) and a novel evaluation metric (named Churn Definition Change Rate) that can be used as a warning that the definition should be updated and the churn classifier should be retrained.
+  We applied a novel metric to define churn individually (named Individual Fixed Value) and a novel evaluation metric (named Churn Definition Change Rate) that can be used as a warning that the definition should be updated and the churn classifier should be retrained.
 
 # GitHub Objective
   This project aims to validate the paper's findings and can be used to understand how to implement the proposed solution in a production environment.
