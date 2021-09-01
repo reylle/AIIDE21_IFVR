@@ -20,8 +20,8 @@ The datasets, codes, and results for the AIIDE21 accepted paper: "Optimizing Pro
 
 # Hardware Requirements:
   The hardware requirement can vary depending on your goal and input data. 
-  To run the experiments it is advisable to have at least 32 GB of RAM because it considers numerous windows sizes and slides them throught the whole dataset. 
-  To implement in a production evironment the requirement depends on the input data, but it should be smaller.
+  To run the experiments it is advisable to have 32 GB of RAM because it considers numerous windows sizes and slides them throught the whole dataset. 
+  To implement in a production evironment the requirement depends on the input data, but it should be much smaller.
 
 # Warning
   Since there are numerous windows sizes and all of them run through the whole dataset, the number of iterations is very high. 
